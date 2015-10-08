@@ -65,111 +65,127 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I love to eat! I could eat almost anything you could put in front of me (as long as it’s edible). Even though I love to eat, I don’t have much of a sweet tooth. I mean, occasionally I’ll crave a churro or something, but I usually don’t like sweets. I prefer savory meals like steak, or a nice burger. And, I really hate spaghetti!"
         android:id="@+id/eatingText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/accentButton" />
+        android:layout_above="@+id/accentButton"
+        android:text="@string/food_text"
+        android:visibility="gone" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gamingView"
-        android:background="@drawable/Metro"
-        android:layout_above="@+id/eatingText"
-        android:layout_alignTop="@+id/accentsView"
+
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/eatingButton"
-        android:layout_alignRight="@+id/eatingText"
-        android:layout_alignEnd="@+id/eatingText" />
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/eatingButton"
+        android:layout_alignEnd="@+id/eatingButton"
+        android:visibility="gone"
+        android:background="@drawable/metro1"
+        android:layout_above="@+id/gamingText" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/accentsView"
         android:background="@drawable/accent"
-        android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/sleepView"
         android:layout_alignStart="@+id/sleepView"
-        android:layout_toStartOf="@+id/eatingButton"
-        android:layout_alignRight="@+id/eatingText"
-        android:layout_alignEnd="@+id/eatingText" />
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/eatingButton"
+        android:layout_alignEnd="@+id/eatingButton"
+        android:visibility="gone" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/programmingView"
-        android:background="@drawable/Prog"
-        android:layout_above="@+id/eatingText"
-        android:layout_alignTop="@+id/eatingView"
-        android:layout_alignLeft="@+id/eatingView"
-        android:layout_alignStart="@+id/eatingView" />
+        android:background="@drawable/prog"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_above="@+id/programmingText" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sleepView"
-        android:background="@drawable/Sleep"
-        android:layout_alignBottom="@+id/accentsView"
-        android:layout_alignRight="@+id/eatingText"
-        android:layout_alignEnd="@+id/eatingText"
-        android:layout_alignTop="@+id/gamingView" />
+        android:background="@drawable/sleep"
+        android:layout_alignRight="@+id/eatingButton"
+        android:layout_alignEnd="@+id/eatingButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:layout_above="@+id/sleepingText" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/eatingView"
-        android:background="@drawable/Chicken"
-        android:layout_alignTop="@+id/gamingView"
-        android:layout_alignBottom="@+id/accentsView" />
+        android:background="@drawable/chicken"
+        android:layout_alignRight="@+id/eatingButton"
+        android:layout_alignEnd="@+id/eatingButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:layout_above="@+id/eatingText" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I also really enjoy playing games. A game that I’ve recently gained interest for is Metro Last Light. But, that’s beside the point. My favorite genre of games would have to be RPG’s. Out of all RPG’s, Dragons Dogma is one of my favorite. I would have Skyrim be my favorite, but I dislike the bread and butter fighting. My favorite video game series is Fallout."
         android:id="@+id/gamingText"
-        android:layout_below="@+id/gamingView"
         android:layout_above="@+id/accentButton"
         android:layout_alignRight="@+id/eatingButton"
         android:layout_alignEnd="@+id/eatingButton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="@string/gaming_text"
+        android:visibility="gone" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" I really like speaking in different accents. The only one that I know that I’m really good at is a russian accent. I mean, I don’t think it’s hard. At least for me . I can also do a Smeagol. I am only good at doing accents because of all of my free time. I have way too much of it. I also find my own voice unamusing, so I try to amuse others when I can."
         android:id="@+id/accentText"
         android:layout_below="@+id/accentsView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/accentButton"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="@string/accents_text"
+        android:visibility="gone" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If I could choose something to do for the rest of my life it would have to be sleeping(Not really). Sleeping is my favorite thing to do. Because any problems you have can become much easier to deal with due to the fact that dreams can help us solve problems. I also really enjoy lucid dreaming; the feeling of power that comes with it is amazing. You have control of your dream when you lucid dream, so you can do almost anything, sadly I’ve only done it once."
         android:id="@+id/sleepingText"
         android:layout_below="@+id/gamingView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/accentButton"
         android:layout_alignRight="@+id/eatingButton"
-        android:layout_alignEnd="@+id/eatingButton" />
+        android:layout_alignEnd="@+id/eatingButton"
+        android:text="@string/sleep_text"
+        android:visibility="gone" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" I hope to become a software engineer. After all, it pays well. My inspiration for this came from my uncle. I did not have the easiest life growing up. In fact I’m still being taught how to function in society. When my aunt and uncle took me in I looked at my surroundings and said, “Wow, this is nice.” I had always wanted to be a programmer, but seeing my uncles achievements really solidified this aspiration. I also like seeing my little creations in action. It&apos;s like magic."
         android:id="@+id/programmingText"
         android:layout_alignTop="@+id/accentText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/accentButton"
         android:layout_alignRight="@+id/eatingButton"
-        android:layout_alignEnd="@+id/eatingButton" />
+        android:layout_alignEnd="@+id/eatingButton"
+        android:text="@string/programming_text"
+        android:visibility="gone" />
 
 </RelativeLayout>
