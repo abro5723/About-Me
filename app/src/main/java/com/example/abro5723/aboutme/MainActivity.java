@@ -1,5 +1,11 @@
 package com.example.abro5723.aboutme;
+/**
+ * author- Ashton Brown
+ * Version- 1.2
+ * A simple app that deals with the alteration of visibility.
+ */
 
+//Necessary imports required for the applications arguments to process correctly
 import android.support.v4.app.NotificationCompatSideChannelService;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,11 +14,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.graphics.Color;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
+    //Created variables to use in code
     private Button eatingButton;
     private Button sleepingButton;
     private Button gamingButton;
@@ -28,13 +38,17 @@ public class MainActivity extends AppCompatActivity {
     private TextView gamingText;
     private TextView programmingText;
     private TextView accentsText;
+    private RelativeLayout background;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        //association of created variables with existing stuff in Layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        background = (RelativeLayout) findViewById(R.id.Background);
         eatingButton = (Button) findViewById(R.id.eatingButton);
         sleepingButton = (Button) findViewById(R.id.sleepingButton);
         gamingButton = (Button) findViewById(R.id.gamingButton);
@@ -70,13 +84,30 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_settings)
+        {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
+    //Method for changing the background of the program
+    private void changeBackgroundColor()
+    {
+        int redColor;
+        int blueColor;
+        int greenColor;
+
+        redColor = (int) (Math.random()*256);
+        greenColor = (int) (Math.random()*256);
+        blueColor = (int) (Math.random()*256);
+
+        background.setBackgroundColor(Color.rgb(redColor, blueColor, greenColor));
+    }
+
+    //Method for changing the visibility of all of the variables
+    //Designed for the changing of every variable
     private void changeAccentVisibility()
     {
         if(accentsText.getVisibility() == View.GONE && accentsView.getVisibility() == View.GONE)
@@ -99,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Again, the program changes visibility of all variables so that certain things are visible
+    //and others are not
     private void changeProgramVisibility()
     {
         if(programmingText.getVisibility() == View.GONE && programmingView.getVisibility() == View.GONE)
@@ -121,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Just as before. The alteration of visibility
     private void changeGameVisibility()
     {
         if(gamingText.getVisibility() == View.GONE && gamingView.getVisibility() == View.GONE)
@@ -144,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Helper method for the changing of sleep widgets
     private void changeSleepVisibility()
     {
         if(sleepingText.getVisibility() == View.GONE && sleepingView.getVisibility() == View.GONE)
@@ -166,6 +201,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //final helper method for eating widgets
     private void changeEatingVisibility()
     {
         if(eatingText.getVisibility() == View.GONE && eatingView.getVisibility() == View.GONE)
@@ -188,45 +224,56 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Listeners get setup so that the buttons do stuff
     private void setupListeners()
     {
+        //method for the eating buttons function
         eatingButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View buttonView)
             {
                 changeEatingVisibility();
+                changeBackgroundColor();
             }
         });
 
+        //method for the sleeping objects
         sleepingButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View buttonView)
             {
                 changeSleepVisibility();
+                changeBackgroundColor();
             }
         });
 
+        //method for gaming objects
         gamingButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View buttonView)
             {
                 changeGameVisibility();
+                changeBackgroundColor();
             }
         });
 
+        //method for programming objects
         programmingButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View buttonView)
             {
                 changeProgramVisibility();
+                changeBackgroundColor();
             }
         });
 
+        //method for all accent objects
         accentButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View buttonView)
             {
                 changeAccentVisibility();
+                changeBackgroundColor();
             }
 
         });
